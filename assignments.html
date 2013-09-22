@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-<h1>Period 6 Minutia</h1>
+<h1>Assignments</h1>
 <div class=col-md-8>
   {% for post in site.posts %}
  
 
- {% if post.url contains 'pd6' %}
+ {% if post.url contains 'hw' %}
   <h3><a href="{{ post.url }}">
       {{ post.title }}
     </a></h3> 
@@ -17,10 +17,10 @@ layout: default
 
 </div>
 <div class=col=md-2>
-<h3>Old Posts</h3>
+<h3>Old Assignments</h3>
 <ul>
   {% for post in site.posts %}
- {% if post.url contains 'pd6' %}
+ {% if post.url contains 'hw' %}
   <li><a href="{{ post.url }}">
       {{ post.title }}
     </a></li> 
