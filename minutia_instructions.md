@@ -5,7 +5,7 @@ layout: default
 Instructions for writing minutia
 ================================
 
-## Refernence
+## Reference
 
 [Markdown Reference](http://daringfireball.net/projects/markdown/syntax)
 
