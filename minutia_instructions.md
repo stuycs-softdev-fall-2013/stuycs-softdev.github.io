@@ -27,6 +27,10 @@ Make sure the file has the following on top:
 
 Where **THELAYOUT** is **minutia-6** or **minutia-7**.
 
+The \-\-\- are three dashes in a row.
+
+The post should start with your name and the date.
+
 Then: 
 
 1. git add the post file
