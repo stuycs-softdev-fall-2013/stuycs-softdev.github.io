@@ -1,0 +1,33 @@
+---
+layout: minutia67
+title: Period 6 Minutia 02
+---
+
+## Minutia 02
+### Jane Argodale
+
+###On Minutia
+ * You get a zero for every day you don't do your assigned minutia! So do the minutia!
+ * Email Mr. Zamansky if you're absent on your assigned day.
+
+###Working at Home
+ * When working from home, SSH into your school account so that you don't have to spend time doing git pull at school the next day.
+
+###Jinja
+ * With Jinja's templating system, you can insert if/else statements into HTML pages. Examples are up on class code.
+
+###Python Lists
+ *  list can be declared empty or with initializing elements, which can be of all kinds of different datatypes (ints, strings, other lists).
+ * Can use indexing like a Java array, or use operations to append or take certain parts of a list.
+ * Can be concatenated together with a plus sign, but remember that appending to a list edits the list, while setting a list to itself + some other list creates a new list out of those list parts.
+
+
+###Python Dictionaries
+ * Samples up on classcode
+ * These are hash maps that can be indexed by any non-mutable datatype (strings, ints, etc).
+ * Store key-value pairs, making for faster searching—expected constant time.
+ * Tip for preserving this expected constant time: hash tables must be sparse to be effective.
+ * Can retrieve all the values/keys.
+
+###Homework
+ * Just kidding, don't do it, because Mr. Z said we didn't get far enough with what he wanted to do in class today.
