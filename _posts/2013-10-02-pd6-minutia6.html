@@ -1,0 +1,17 @@
+---
+layout: minutia-6
+title: Minutia 06
+---
+
+<h1> Minutia 06 Period 6 </h1>
+<h2> Aaron Coppa </h2>
+<h2> 10/02/13 </h2>
+<h2> Storing Data Through Out Sessions </h2>
+<h3> Shelves <h3>
+<p> Shelves are a type of database used for storing python dictionaries. You can write to and read from them through out your python program. However, they store a specific data structure. There are a few restrictions for shelves. <b>They can only have strings as their keys</b> ; there is no limitation to what the values can be! Shelves aren't so useful however; they aren't made for multiple users and would require locking for use on a website. Instead, Mr Z brought up flask-shelves which are slower, but will work with multiple users. </p>
+
+<h3> Storing Data in Get and Post requests </h3>
+<p> Another way to keep track of what's been happening is to use <b> hidden fields </b> in forms. You can pass variables back and forth from server to client with these, but it is not so secure. With the advent of cookies, hidden fields have become somewhat deprecated. </p>
+
+<h3> Counter </h3>
+<p> To test out the different forms of storing data we wrote a counter program, that would display an incremented value every time we reloaded a page. The first way we did this was by storing the value in a hidden field of a form, reading it on the post, and returning an incremented value. Then we decided to try out using regular python shelves. Since we (Mr Z's computer) was the only thing connecting to the website, this was okay. We ended up taking an ID input and then branching on its existence as a key. If it existed we incremented it, stored it back in the dictionary and then returned the page with the new value. Otherwise we created a key-value pair in our shelf. </p>
