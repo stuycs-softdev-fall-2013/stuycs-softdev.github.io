@@ -1,0 +1,44 @@
+
+--
+layout: minutia-10
+title: Minutia-10
+--
+
+<h1> Minutia 10 Pd 7 </h1>
+
+<h4> Justin Duda </h4>
+<h4> 10/08/13 </h4>
+<br>
+
+<h3>Student Database Designs</h3>
+
+<p>Continuing with yesterday's lesson, three representatives from different groups presented their group's design of a school database.<p>
+<p>
+<b>Zane:</b>
+<br>
+Zane described his groups database design as a table in which students indexed using their OSIS numbers. Each student entry then had a list of the students info, including biographical information, classes+teachers+grades, etc.<br> Mr. Zamansky described this approach as monolithic, similar to a massive filing cabinet with folders for each student and their information. This type of database would be good for searching  up individual students, but troublesome for, say, finding the students of a certain class.
+</p>
+
+<p>
+<b>Will:</b>
+<br>
+Will's group designed their database as three seperate matrices, one for students, one for classes, and one for teachers. Each students entry would have its biographical information as well as pointers to the appropriate classes and teachers. Each class would have pointers to its students and its teacher, and each teacher would have a pointer to its class. <br>
+Mr. Z said that this design was less monolithic than Zane's design, and that at one point there was a big shift from monolithic database desgins like Zanes to ones like Will's. He elaborated to say that such a less monolithic design is more flexible and easier on disk space, but could be slower in some aspects.
+</p>
+
+<p>
+<b>Sebastian: </b>
+<br>
+The design of Sebastian's group was one that Mr. Z characterized as a mix between the previous two. His group had one matrix of students, with each student entry having a pointer to a schedule with periods + classes + teachers.
+</p>
+
+<h3>Records, Classes, and Databases</h3>
+<p>
+The precursor to classes were records, which were like classes, but without methods.  
+Some ideas to create an optimal database had been to have an array of data and a hash table with key's of the array's data and values of the data's indexes, and a search tree pointing to the array. For a (simple) database, a hash-table can be a very good idea.
+</p>
+
+<h3>Binary Trees</h3>
+<p>
+Binary Trees are very useful tools, but the one we learned in APCS, the Binary Search Tree, is rarely ever used in real life. Some binary trees more commonly used are the Red Black Tree, the 2-3 Tree, the B-Tree, and the Splay Tree. Mr. Z recommended that people have a thourough understanding of the Splay Tree before a job interview.
+</p>
