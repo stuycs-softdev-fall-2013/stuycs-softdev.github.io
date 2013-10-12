@@ -1,0 +1,67 @@
+—--
+layout: Minutia-13
+title: Minutia 13 Period 6
+—--
+
+<h1> Minutia 13 Pd 6 </h1>
+<h3> Jing Lin </h3>
+<h3> 10-9-13 </h3>
+
+<h3> Brief Overview </h3>
+<p> SQLite 3 presents a dynamic of combining information from different sources. With it, tables may be linked together. Such queries are quick because SQL is optimized for combining different parts of tables. Alternatively, one may apply "Machine Learning", or Matrix Multiplication to determine what information one wants, similar to the dot product in Physics that combines two different vectors to store information about both of them. Through the instances shown below, various attributes of tables were outputted. </p>
+<ol>
+    <li>Select teachers.last, students.first, students.last from teachers, students where teachers.last="Zamansky" and students.id < 4000 </li>
+    <li>Select students.first, students.last, grades.grade, classes.description from students.grades.classes where students.last="Richards" and students.id=grades.id and grades.class="SD" </li>
+</ol> 
+<p> SQLite may be incorporated into Python with the commands: <br>
+    Python <br>
+    Import sqlite3 (<b> NOTE: Use sqlite3, not any previous versions</b>) <br>
+    c = sqlite3.connect("test.db") <br>
+    Back In The Day, the connect() function would connect to a database hosted on a website but here, the connect() function connects to a file, test.db on the local system <br>
+    q = "SELECT * from teachers" <br>
+    result = c.execute(q) <br>
+    result <br>
+    Received a Cursor object >sqlite3.Cursor object at 0x95490e0< <br>
+<h3> Sifting Through Cursor Objects </h3>
+    Move through the Result and scan through the elements of the response, similar to a pointer. <br>
+    Similar to a List, but more like a Stack popping? <br>
+    &#160 &#160 &#160 &#160 for line in result: <br>
+    &#160 &#160 &#160 &#160 &#160 &#160    print line <br>
+    &#160 &#160 &#160 &#160 (u'zamansky', u'michael', u'SD') <br>
+    &#160 &#160 &#160 &#160 . <br>
+    &#160 &#160 &#160 &#160 . <br>
+    &#160 &#160 &#160 &#160 . <br>
+    &#160 &#160 &#160 &#160 for line in result: <br>
+    &#160 &#160 &#160 &#160 &#160 &#160    print line <br>
+    &#160 &#160 &#160 &#160 NULL <br>
+    <b>NOTE: The "List" Line is empty</b> <br> <br>
+    Another instance tried was Richard Reed <br>
+q = """... select * from students, grades where students.last = "Richards" and students.id=grades.id...""" <br>
+&#160 &#160 &#160 &#160 r = c.execute(q) <br>
+&#160 &#160 &#160 &#160 for line in r: <br>
+&#160 &#160 &#160 &#160 &#160 &#160     print line <br>
+&#160 &#160 &#160 &#160 (3001, u'Richards, u'Reed', u'APCS', 96) <br>
+&#160 &#160 &#160 &#160 (3001, u'Richards, u'Reed', u'APCS', 97) <br>
+&#160 &#160 &#160 &#160 (3001, u'Richards, u'Reed', u'INTRO', 99) <br>
+&#160 &#160 &#160 &#160 (3001, u'Richards, u'Reed', u'SD', 97) <br>
+&#160 &#160 &#160 &#160 (3001, u'Richards, u'Reed', u'SYS', 95) <br>
+&#160 &#160 &#160 &#160 r = c.execute(q) <br>
+&#160 &#160 &#160 &#160 for line in r: <br>
+&#160 &#160 &#160 &#160 &#160 &#160     print line[4] <br>
+&#160 &#160 &#160 &#160 APCS <br>
+&#160 &#160 &#160 &#160 APCS <br>
+&#160 &#160 &#160 &#160 INTRO <br>
+&#160 &#160 &#160 &#160 SD <br>
+&#160 &#160 &#160 &#160 SYS <br>
+
+</P>
+<p> What if you don't want a Stack but an actual List? Ah! <br>
+&#160 &#160 &#160 &#160 r = c.execute(q) <br>
+&#160 &#160 &#160 &#160 results = [] //Here Is A List! <br>
+&#160 &#160 &#160 &#160 for line in r: <br>
+&#160 &#160 &#160 &#160 results.append(line) //Items are being put into the List <br>
+&#160 &#160 &#160 &#160 for line in results: <br>
+&#160 &#160 &#160 &#160 &#160 &#160     print line  //Volla. <br>
+<h3> What The Future Holds </h3>
+<p> Python Feature - List Comprehension: results = [x for x in r], x being each item in the LIST, where x is each of the items in r. Work: Reimplement the database part of the Login Code with SQLite. 
+app.py with its routes is in here, including the code that checks the shelve (Deals with the Session material here). Recommendation: auth.py, utils.py Something like authenticate(username, password) to check shelve to determine whether the input material is accurate. Change from shelve to SQLite with former partners. </p>
