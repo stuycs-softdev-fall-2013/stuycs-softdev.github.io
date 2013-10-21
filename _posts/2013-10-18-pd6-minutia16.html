@@ -1,0 +1,59 @@
+---
+layout: minutia-6
+title: Minutia 16
+---
+
+<h1> Minutia 16 Pd 6 </h1>
+<h3> Jasper Lu </h3>
+<h3> 10-18-13 </h3>
+
+<h2>
+    <font color = 'red'> U </font>
+    <font color = 'orange'> P </font>
+    <font color = 'yellow'> D </font>
+    <font color = 'green'> A </font>
+    <font color = 'blue'> T </font>
+    <font color = 'indigo'> E </font>
+    <font color = 'purple'> S </font>
+</h2>
+<h3> From now on, every lateness after a student's third lateness will count as one point of that student's final grade </h3>
+
+<h3> Mongo Stuff </h3>
+	<p>
+Unset: Can be used to get rid of fields in a collection that you don't need anymore.
+</p>
+db.heros.update({first: 'johny'}, {$unset: 'powers' : ''}})
+<p>
+The above will find the first instance of first: 'johny' in a collection and remove the powers category. If there are multiple instances of first: 'johny', as always, you can add <b>{multi: true}</b> as a third field.
+</p>
+
+<p> Also, if the option <b>{upsert: true}</b> is added as a third field, i.e. db.heros.update({first: 'johny'}, {$set {powers: 'blah'}}, {upsert: true}), then a field with first: 'johny' will be added if no such entry is found.
+</p>
+
+<h3> PyMongo</h3>
+<p>
+Do the following steps to connect to a Mongo Client in python.
+First, install pymongo using pip install pymongo.
+</p>
+<code>
+    from pymongo import MongoClient </br>
+    connection = MongoClient( (address of the mongo instance, such 'db.stuycs.org. Defaults to local), (port of mongo instance, defaults to 27017)) </br>
+    db = connection.dbname </br>
+    (From here, you can perform any functions you can normally do in a mongo shell by calling db.collectionname.function(). However, all key values must be in quotes). </br>
+</code>
+<p>
+There are a number of things you can do with pymongo, most importantly, using python list comprehensions with mongo commands.
+</p>
+
+<code>
+    for x in db.collection.find() </br>
+    print x['blah'] </br>
+    #prints a field in each object in the collection </br>
+    [x for x in db.collection.find() if x['number'] % 50 == 0 and x > 100]</br>
+    #prints out all the objects in the collection with its number key greater than 100 and divisble by 50. </br>
+    ["%s | %s" %(x['last'],x['first']) for x in db.collection.find()] </br>
+    #formats the output</br>
+</code>
+<p>
+The above are just a few examples. THere are many more things you can do with pymongo.
+</p>
