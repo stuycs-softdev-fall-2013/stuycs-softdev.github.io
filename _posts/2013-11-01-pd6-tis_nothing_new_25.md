@@ -9,14 +9,14 @@ title: Tis nothing new (25)
 
 
 ###*IMPORTANT:*
->Send yo project into GitHub by Monday 2:00am
->We will be demoing so if you are using mongodb, remove authenication and do not connect to the stuydb
->We will also continue the lesson on statebased searches on Monday 
+>Send yo project into GitHub by Monday 2:00am.
+>We will be demoing so if you are using mongodb, remove authenication and do not connect to the stuydb.
+>We will also continue the lesson on statebased searches on Monday.
 
 ###Other stuff:
->Github has graphic representations of commits and code changes
+>Github has graphic representations of commits and code changes.
 >We seem to have a preference to do work on Sundays and our work habits drop though the week
->Mr. Zamansky shaved off his beard for halloween, so he looks weird
+>Mr. Zamansky shaved off his beard for halloween, so he looks weird.
 
 ###Unimportant stuff:
 >     __________________	      
@@ -26,4 +26,3 @@ title: Tis nothing new (25)
 >            *--- \ /           \
 >          _/___         *----- _|
 >               \______________/
->Enterprise
