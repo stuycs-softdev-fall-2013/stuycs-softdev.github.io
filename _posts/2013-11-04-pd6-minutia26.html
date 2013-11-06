@@ -1,0 +1,55 @@
+---
+layout: minutia-6
+title: Minutia 26
+---
+
+<h1> Minutia 26 Pd 6 </h1>
+<h2> Jeffrey Yin </h2>
+<h3> 11-04-13 </h3>
+
+Public Service Message of the Day: Nigerian Princes offer the best insurance for your viagra.
+
+
+<h1> Miscellaneous Info</h1>
+If you get emails from recruiters, make sure you check whether you're getting scouted by the company itself, or by a recruiting agency. Be wary of the latter, because they are soulless companies and dun't love you. Google's recruiters are also some of the most incompetent people on Earth.
+Z gets around the firewall for speed, he swears. And uses incognito. Nothing illicit to see here folks.
+
+<h1> Homework</h1>
+Sign up for crowdgrader.org, and invite you collaborators. When? Yesterday night! (Z also sent out an email)
+
+<h1> Explicit vs Implicit Data Structures</h1>
+(Note that these are not official terms.)
+Most of what we've done thus far used explicit data sets, where every data point is generated and stored in physical memory. 
+For implicit data sets, we don't actually create the whole set at once. It's implied: only parts of it live at any given time.
+
+<h1> Interlude: USACO(Wisconsin)</h1>
+Bessie is in a field, which is a rectangular array with rocks and food. Bessie wants to get to the food in exactly six turns. How many ways can this be done?
+Z solved this problem using cellular automata/Game of Life. 
+Moral of the story: Keep implicit data structures somewhere in your mind, for Bessie's sake.  
+
+<h1> Reanalyzing Maze Solver Algorithm </h1>
+Each call to solve represents one state in the state space (one-node graph)
+A recursive call moves to another state or node
+A return backtracks to an earlier node.
+The method that we used to solve the maze was done implicitly. We never had the entire path in memory at once--we instead built parts which collapsed every time we returned, saving on memory.
+Maze Solver two ways:
+<pre> <code>
+Recursive: 
+Solver(){
+	if (done) return
+	else{
+		move
+		recurse on new neighbors
+	}
+}
+Iterative:
+while(!done){
+	m= stack.pop()
+	do move m
+	add new neighbors to stack of moves
+}
+</code> </pre>
+<h1> Depth First vs Breadth First </h1>
+In that example, we used a stack as our frontier. As a result, we explored one path fully before returning to the intersection.
+What if instead of a stack, we were to use a queue? When arriving at an intersection, you would explore all paths a little bit at a time. We search all nodes one unit away, then two units away, etc. This one change leads to a dramatically different effect.
+Breadth first searches are best done by encapsulating in a loop.
