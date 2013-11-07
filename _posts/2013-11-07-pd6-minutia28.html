@@ -1,0 +1,45 @@
+---
+layout: THELAYOUT
+title: Minutia 27
+---
+
+<h2>11/7/13<br />Andrew Zarenberg</h2>
+
+Class began with team <strong>JEJA</strong> demoing their Bloginator project.  
+
+<br /><h3>Getting data from the internet</h3>
+One method of getting data from a website is by <em>screen scraping</em>.  This involves going to the actual website and retrieving all of the HTML from the site.  
+
+<div class="alert alert-info">Python Example:</div>
+<code>import urllib2
+
+url = "http://www.nytimes.com"
+request = urllib2.openurl(url)
+result = request.read()
+print(result)</code>
+
+<div class="alert alert-warning"><strong>Drawbacks</strong>
+  <ul>
+    <li>JavaScript changes to elements will not appear in the HTML</li>
+    <li>To retrieve data you need to go through the whole mess of HTML tags just to find what you need</li>
+  </ul>
+</div>
+
+<h3>BeautifulSoup</h3>
+BeautifulSoup provides the tools to more easily retrieve data from a site.
+<div class="alert alert-info">Python Example:</div>
+<code>from bs4 import BeautifulSoup
+import urllib2
+url = "http://www.nytimes.com"
+soup = BeautifulSoup(url)
+  
+print(soup.prettify()) # Formats the HTML in a nicer manner
+print(soup.title) # Returns only the title element from the page
+for a in soup.find_all('a'): # loops through all the <a> tags in the HTML
+  print(a.get_text()) # returns only the text of the elements
+</code>
+
+<h3>There has to be something easier though, right?</h3>
+<h4>API</h4>
+Most websites that contain data provide APIs that only output data rather than a whole entire webpage which helps web developers retrieve that data much easier.
+<br /><strong>RESTful</strong> APIs allow developers to enter arguments into a <strong>GET</strong> request and have an output, normally <strong>JSON</strong>.  JSON can easily be converted directly into a dictionary which allows for much easier use than screen scraping.
