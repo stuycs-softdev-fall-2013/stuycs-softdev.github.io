@@ -11,12 +11,12 @@ Class began with team <strong>JEJA</strong> demoing their Bloginator project.
 One method of getting data from a website is by <em>screen scraping</em>.  This involves going to the actual website and retrieving all of the HTML from the site.  
 
 <div class="alert alert-info">Python Example:</div>
-<code>import urllib2
+<pre><code>import urllib2
 
 url = "http://www.nytimes.com"
 request = urllib2.openurl(url)
 result = request.read()
-print(result)</code>
+print(result)</code></pre>
 
 <div class="alert alert-warning"><strong>Drawbacks</strong>
   <ul>
@@ -28,15 +28,15 @@ print(result)</code>
 <h3>BeautifulSoup</h3>
 BeautifulSoup provides the tools to more easily retrieve data from a site.
 <div class="alert alert-info">Python Example:</div>
-<pre><code>from bs4 import BeautifulSoup<br />
-import urllib2<br />
-url = "http://www.nytimes.com"<br />
-soup = BeautifulSoup(url)<br />
-<br />  
-print(soup.prettify()) # Formats the HTML in a nicer manner<br />
-print(soup.title) # Returns only the title element from the page<br />
-for a in soup.find_all('a'): # loops through all the &gt;a&rt; tags in the HTML<br />
-  print(a.get_text()) # returns only the text of the elements<br />
+<pre><code>from bs4 import BeautifulSoup
+import urllib2
+url = "http://www.nytimes.com"
+soup = BeautifulSoup(url)
+
+print(soup.prettify()) # Formats the HTML in a nicer manner
+print(soup.title) # Returns only the title element from the page
+for a in soup.find_all('a'): # loops through all the &gt;a&rt; tags in the HTML
+  print(a.get_text()) # returns only the text of the elements
 </code></pre>
 
 <h3>There has to be something easier though, right?</h3>
