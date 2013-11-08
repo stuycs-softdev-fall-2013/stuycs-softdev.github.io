@@ -35,7 +35,7 @@ soup = BeautifulSoup(url)
 
 print(soup.prettify()) # Formats the HTML in a nicer manner
 print(soup.title) # Returns only the title element from the page
-for a in soup.find_all('a'): # loops through all the &gt;a&rt; tags in the HTML
+for a in soup.find_all('a'): # loops through all the &lt;a&gt; tags in the HTML
   print(a.get_text()) # returns only the text of the elements
 </code></pre>
 
