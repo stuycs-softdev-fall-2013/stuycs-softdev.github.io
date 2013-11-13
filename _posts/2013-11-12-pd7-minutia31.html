@@ -1,0 +1,69 @@
+---
+layout: minutia 7
+title: Minutia 27 - Processes and APIs
+---
+
+<h2>11/12/2013<br /> Christine Xu </h2>
+We talked a bit about grading our peers.
+Then we talked about cloning the Softdev server. You can do this:
+
+<br /><h3>RSAP for Softdev</h3>
+<li> -self clip <. ssh/id.rsa.pub (clip the ssh id)
+make sure you add this in your github SSH key section </li>
+
+<i>more info here: http://developer.nytimes.com/docs/read/article_search_api_v2</i>
+
+<br />
+<br >
+<li> The softdev.server.stuycs.org:5050 uses built in Flask server, works until 2 + people log in
+Old time CS Process model: Two different types: THREAD and PROCESS Models</li>
+
+<h3> PROCESS: </h3>
+<li>Every process is seperate. (secure and simple) The problem was that is was very hard for two processes to share (unix worked like this) data with each other. Separate process, separate memory.
+Python developed a process based model. Everytime you run a program, each would be a separate program.</li>
+
+<br />
+<h3> THREAD: </h3>
+<li> All programs share memory. (Windows) </li>
+<li> ex: You could put something in your doc and put it in your spreadsheet
+--> memory leaks. Over course of time, this became a problem. </li>
+<br />
+<b> For Example: </b>
+<li>In the "Circle of Iron" supposed to be a Bruce Lee movie, got stolen by Carrie
+the "Book of knowledge" every page has a mirror.</li>
+
+We can all huddle around it, but we can't all write at the same time.
+<br>
+<br />
+<b> Solution: Green Unicorn</b> 
+<br />
+<li> (pip install green unicorn) </li>
+<li> gunicorn -w -4 [4 people] -b [bind] (0.0.0.0:50000)(server) app(name of file):app(flask variable) </li>
+<li> every process has a unique number that associates with it aka "PID" </li>
+<li> you can also kill the process (kill-9 kills the process with a vengence)...it actually sends a signal "YOU BETTER STOP RUNNING"</li>
+<br>
+For project 2, we will assign port numbers. Your port numbers are going to start with 7, ones digit is your group number,
+7 0 0 #
+<br/ >
+<br/>
+(If you want multiple ports, just change the two middle numbers.
+<br />
+<br />
+We went over the tumblr and NYTimes API and how to search for images
+You can just google "NYTIMES" to get here: http://developer.nytimes.com/docs/read/article_search_api_v2
+<br />
+<br />
+WE THEN WENT AND LOOKED AT PANDAS (at the NYTIMES API request site)
+Returns a request URL which you can copy and paste to the address bar (You'll need the API key though)
+<br />
+Other sites we looked at were citibikeny : http://citibikenyc.com/stations/json
+and Socrata http://dev.socrata.com
+<br />
+<br />
+<b> THE NEXT PROJECT: </b>
+<br />
+You need to use at least 1 web API. Chances are you will use more than 1. At least one has to be regular API, but you can also screenscrape other websites. Don't use authentication and if you do, see if they have libraries (ex: Twitter library) Do something creative!!
+Ex project: You would type in something food related and it would screenscrape recipes and picture for the item, then it would tell you price of each ingredient
+<br>
+<br>
+TONIGHT: Look for cool websites to poke around, tomorrow we will break into groups and discuss.
