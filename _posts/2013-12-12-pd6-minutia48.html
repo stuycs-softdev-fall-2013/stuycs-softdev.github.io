@@ -1,0 +1,111 @@
+---
+layout: minutia-6
+title: Minutia 11
+---
+<h1> Minutia 48 Pd 6 </h1>
+<h2> Raymond Lam </h2>
+<h2> 12-12-13 </h2>
+<br>
+<h2>Presentations</h2>
+<h3>The Price is Right!</h3>
+<ul>
+  <li>Last group's presentation</li>
+  <li>Derek, Tyrone, Roger, and Helen created an online version
+of the TV game show The Price is Right</li>
+  <li>After logging in, you can start a new game:</li>
+  <ul>
+    <li>A random product is shown from the Etsy and Edmunds API's.</li>
+    <li>Your job is to guesstimate the product's worth (given 3
+guesses).</li>
+    <li>In order to land a correct guess, you have to have
+&lt;=10% error.</li>
+    <li>Guessing correctly adds the product's worth to your total
+score.</li>
+    <li>When your game is over, your score is compared to and
+ranked among other scores within a database.</li>
+  </ul>
+</ul>
+<h3>Z's Observations</h3>
+<ul>
+  <li>Better than last year's!</li>
+  <li>Nice that the groups presented to the room rather than to Z
+alone.</li>
+  <li>No one talked about I, only we (but what about me?).</li>
+  <li>Lessons to take away:</li>
+  <ul>
+    <li>Share credit, take blame!</li>
+    <li>Make your partners look good!</li>
+    <li>Use the right voice when you present!</li>
+    <li>Every corporation is evil, but Apple is very evil.</li>
+  </ul>
+</ul>
+<br>
+<h2>Bogus Email Addresses</h2>
+<p>Head to mailinator.com to get your very own temporary email
+addresses! Want to sign up for one-shot-deals but don't want to use
+your private email? Don't want to waste time making a whole new email
+address? Then this is the solution you've been looking for! Mailinator
+is email stripped down to being receive and read only.
+One thing to note: don't send private info to this email. It IS a
+public email address (plus it gets deleted after some time).
+</p>
+<br>
+<h2>Final Projects</h2>
+<p>The final project will be similar to this project:</p>
+<ul>
+  <li>However, it must incorporate interactions with the user
+(javascript)</li>
+  <li>It is open-ended</li>
+  <li>People can propose their groups this time:</li>
+  <ul>
+    <li>Must have 4 people in a group.</li>
+    <li>These 4 people must be within the same period</li>
+    <li>Proposed groups may be rejected</li>
+  </ul>
+  <li>Due dates and demo dates are pending (same date that the
+systems project is due, anyone?).</li>
+  <li>Multiple groups can do the same thing.</li>
+  <li>Optional: Make your project mobile with <a
+ href="http://phonegap.com/"> phonegap </a> or <a
+ href="http://www.appcelerator.com/"> appcelerator </a>
+  </li>
+</ul>
+<br>
+<h2>Javascript stuff</h2>
+<h3> Closure, continued </h3>
+<p>
+var x = 20; <strong>//this x is a global variable</strong><br>
+var adder = function(){ <br>
+var x = 0; <strong>//this x is different, sort of like a local
+variable</strong><br>
+return function(){ <strong>//function will use the local x
+instead of the global
+one </strong><br>
+console.log(x); <strong>//unless there is no local x. </strong><br>
+x = x + 1; <br>
+} <br>
+}</p>
+<h3> Something else </h3>
+<p>
+var makeAdder = function(inc){ <strong>//you can give input</strong>
+<br>
+var x = 0; <strong>//and the function will use it</strong>
+<br>
+return function(){ <br>
+console.log(x); <br>
+x=x+inc; <br>
+} <br>
+} <br>
+</p>
+<h3> Another thing </h3>
+<p>
+mystore={ x: 20<br>
+, s: "hello" <br>
+, d: 123.45 <br>
+, f: function() { <br>
+console.log("in the function"); <strong>//you can have methods
+inside data
+structures </strong><br>
+} <br>
+}
+</p>
