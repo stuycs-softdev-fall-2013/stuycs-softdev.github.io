@@ -1,0 +1,44 @@
+---
+layout: minutia 7
+title: Minutia 45 - OAuth Stuff/ Projects
+---
+
+<h2>1/08/2014<br /> Christine Xu </h2>
+
+
+<br /><h3>OAuth</h3>
+We went over some more O Auth stuff in the beginning of class. Apparently the StuyCS firewall was the problem, so you should be able to fix the problem we discussed at home. (Unless you live in Stuy... -Zane)
+
+<br />
+<br >
+<li> We reran the oauth file changing a bit for def glogin. The login with google button directly takes you to the Google login. Apparently you can't do it in the incognito window.</li>
+
+<h3> Callback: </h3>
+<li>In the callback, here will always be google+ info, even if the account doesn't use google+;</li>
+<br />
+<li>Because of the profile, Mr.Z's profile showed a lot of his personal information-- (ex: his blog, where he works, NYU, Goldman Sachs) because he authorized these information within his profile. (Depends on the scopes- some scopes will allow you to see the actual emails)</li>
+<li>Point of the callback is not to print a lot of stuff, you want to store the info and redirect the user to his page.
+</li>
+<h3> Debug Bar Extension: </h3>
+<li> The debug bar extension is very useful for using javascript (pip install debug toolbar)</li>
+<li> After you set up the toolbar, you can enter
+toolbar.DebugToolbarExtension(app);
+(look up the code)</li>
+<br />
+<i> You can edit the template on the sidebar, and fiddle with the layouts and edit/experiment your page within the bar. (Sorta like the javascript console) allow you to see request variables, adjust headers, and ect.
+ </i>
+<li>The next thing we talked about was going to another version, where the login button was the ajax (javascript version) version, the login pops up instead of going to another page. (This is very modern and cooler than the popup page)</li>
+
+<br>
+<br />
+
+<li>  We don't need the Oauth 2 callback. The only thing you have to do is change rendertemplate </li>
+<li>  (You just copy the code on google site) If you want the login button of a particular page, you can just go on the website, and they should give you the code.</i>
+<li> every process has a unique number that associates with it aka "PID" </li>
+<li> One of the things you need to enter is the scope info (it's more limited then the profile scope), clilent id (copy off of google dashboard) and data callback (callback in javascript, not server)</li>
+<br>
+
+<li> The callback is similar to the OAuth python but in javascript. You want to check that we are login, and then hide the sign in button; then make an ajax button. (Z did the getcall) You should be able to see it in classwork github. [The call goes to storeToken]
+</li>
+
+<li> After this, we worked on our projects
